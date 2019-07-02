@@ -15,7 +15,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+        setContentView(R.layout.activity_second);
         new Handler().postDelayed(new Runnable() {
 
             /*
@@ -27,7 +27,7 @@ public class MainActivity extends Activity {
             public void run() {
                 // This method will be executed once the timer is over
                 // Start your app main activity
-                Intent i = new Intent(MainActivity.this, SplashActivity.class);
+                Intent i = new Intent(MainActivity.this, SecondActivity.class);
                 startActivity(i);
 
                 // close this activity

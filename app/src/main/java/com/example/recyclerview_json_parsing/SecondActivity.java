@@ -1,14 +1,13 @@
 package com.example.recyclerview_json_parsing;
 
-import androidx.appcompat.app.AppCompatActivity;
+
 import android.app.Activity;
 import android.app.ListActivity;
 import android.app.ProgressDialog;
-import android.content.Intent;
+
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Bundle;
+
 import android.util.Log;
 import android.widget.ListAdapter;
 import android.widget.SimpleAdapter;
@@ -16,12 +15,12 @@ import android.widget.SimpleAdapter;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import android.os.Handler;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class SplashActivity extends ListActivity {
 
+public class SecondActivity extends ListActivity {
 
     // URL to get contacts JSON
     private static String url = "https://raw.githubusercontent.com/mobilesiri/JSON-Parsing-in-Android/master/index.html";
@@ -59,7 +58,7 @@ public class SplashActivity extends ListActivity {
         protected void onPreExecute() {
             super.onPreExecute();
             // Showing progress dialog
-            pDialog = new ProgressDialog(SplashActivity.this);
+            pDialog = new ProgressDialog(SecondActivity.this);
             pDialog.setMessage("Please wait...");
             pDialog.setCancelable(false);
             pDialog.show();
@@ -90,7 +89,7 @@ public class SplashActivity extends ListActivity {
              * Updating parsed JSON data into ListView
              * */
             ListAdapter adapter = new SimpleAdapter(
-                    SplashActivity.this, studentList,
+                    SecondActivity.this, studentList,
                     R.layout.activity_recycler_view_adapter, new String[]{TAG_NAME, TAG_EMAIL,
                     TAG_PHONE_MOBILE}, new int[]{R.id.name,
                     R.id.email, R.id.mobile});
